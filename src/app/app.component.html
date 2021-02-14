@@ -1,0 +1,24 @@
+<div class="play-area">
+  <div>
+    <div class="word-placeholder" *ngFor="let w of words">{{w}}</div>
+  </div>
+  <hr />
+  <div>
+    <div
+      class="word-piece"
+      cdkDrag
+      (cdkDragStarted)="moveWord($event);"
+      (cdkDragEnded)="placeWord($event);"
+      [cdkDragFreeDragPosition]="wd.position"
+      [cdkDragDisabled]="wd.disabled"
+      *ngFor="let wd of wordbank;let i = index;"
+      [attr.id]="'wd'+i"
+    >
+      {{wd.value}}
+    </div>
+  </div>
+</div>
+<div class="status-area">
+  <div class="progress">Words Placed: {{correct}} of {{total}}</div>
+  <div class="timer">Time Elapsed: {{convertTime(timer)}}</div>
+</div>
