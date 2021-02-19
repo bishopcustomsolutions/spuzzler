@@ -8,11 +8,6 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { environment } from "../environments/environment";
 
 import { AppComponent } from "./app.component";
-import { LandingComponent } from './landing/landing.component';
-import { SignInComponent } from './sign-in/sign-in.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { VerifyEmailComponent } from './verify-email/verify-email.component';
 
 @NgModule({
   imports: [
@@ -23,7 +18,7 @@ import { VerifyEmailComponent } from './verify-email/verify-email.component';
     AngularFireAuthModule,
     AngularFirestoreModule
   ],
-  declarations: [AppComponent, LandingComponent, SignInComponent, SignUpComponent, ForgotPasswordComponent, VerifyEmailComponent],
+  declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
